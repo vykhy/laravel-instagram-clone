@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b2886de3511a79b7831263f52bcb2476",
+    "content-hash": "d3f7cb753c7dfbd5c503a9163bee9ebc",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -877,6 +877,90 @@
                 "source": "https://github.com/guzzle/psr7/tree/2.0.0"
             },
             "time": "2021-06-30T20:03:07+00:00"
+        },
+        {
+            "name": "intervention/image",
+            "version": "2.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Intervention/image.git",
+                "reference": "0925f10b259679b5d8ca58f3a2add9255ffcda45"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Intervention/image/zipball/0925f10b259679b5d8ca58f3a2add9255ffcda45",
+                "reference": "0925f10b259679b5d8ca58f3a2add9255ffcda45",
+                "shasum": ""
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "guzzlehttp/psr7": "~1.1 || ^2.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.2",
+                "phpunit/phpunit": "^4.8 || ^5.7 || ^7.5.15"
+            },
+            "suggest": {
+                "ext-gd": "to use GD library based image processing.",
+                "ext-imagick": "to use Imagick based image processing.",
+                "intervention/imagecache": "Caching extension for the Intervention Image library"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Intervention\\Image\\ImageServiceProvider"
+                    ],
+                    "aliases": {
+                        "Image": "Intervention\\Image\\Facades\\Image"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Intervention\\Image\\": "src/Intervention/Image"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Vogel",
+                    "email": "oliver@olivervogel.com",
+                    "homepage": "http://olivervogel.com/"
+                }
+            ],
+            "description": "Image handling and manipulation library with support for Laravel integration",
+            "homepage": "http://image.intervention.io/",
+            "keywords": [
+                "gd",
+                "image",
+                "imagick",
+                "laravel",
+                "thumbnail",
+                "watermark"
+            ],
+            "support": {
+                "issues": "https://github.com/Intervention/image/issues",
+                "source": "https://github.com/Intervention/image/tree/2.6.1"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/interventionphp",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/Intervention",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-07-22T14:31:53+00:00"
         },
         {
             "name": "laravel/framework",
@@ -5935,16 +6019,16 @@
         },
         {
             "name": "nunomaduro/collision",
-            "version": "v5.6.0",
+            "version": "v5.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nunomaduro/collision.git",
-                "reference": "0122ac6b03c75279ef78d1c0ad49725dfc52a8d2"
+                "reference": "0f0f46b6345ee788325b5ce9d53c4e851b2293a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/collision/zipball/0122ac6b03c75279ef78d1c0ad49725dfc52a8d2",
-                "reference": "0122ac6b03c75279ef78d1c0ad49725dfc52a8d2",
+                "url": "https://api.github.com/repos/nunomaduro/collision/zipball/0f0f46b6345ee788325b5ce9d53c4e851b2293a0",
+                "reference": "0f0f46b6345ee788325b5ce9d53c4e851b2293a0",
                 "shasum": ""
             },
             "require": {
@@ -5956,7 +6040,7 @@
             "require-dev": {
                 "brianium/paratest": "^6.1",
                 "fideloper/proxy": "^4.4.1",
-                "friendsofphp/php-cs-fixer": "^2.17.3",
+                "friendsofphp/php-cs-fixer": "^3.0",
                 "fruitcake/laravel-cors": "^2.0.3",
                 "laravel/framework": "^8.0 || ^9.0",
                 "nunomaduro/larastan": "^0.6.2",
@@ -6019,7 +6103,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2021-07-26T20:39:06+00:00"
+            "time": "2021-08-12T13:56:54+00:00"
         },
         {
             "name": "phar-io/manifest",
