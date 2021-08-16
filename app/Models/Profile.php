@@ -18,8 +18,16 @@ class Profile extends Model
         'title'
     ];
 
+    public function profileImage()
+    {
+        return ($this->image) ? '/storage/'. $this->image : '/storage/user.jpg';
+    }
+
     public function user(){
         return $this->belongsTo(User::class);
     }
 
+    public function followers(){
+        return $this->belongsToMany(User::class);
+    }
 }
