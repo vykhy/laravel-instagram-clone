@@ -11,6 +11,9 @@ use Illuminate\Support\Facades\Mail;
 
 class User extends Authenticatable
 {
+    /**
+     * The user model of our application
+     */
     use HasFactory, Notifiable;
 
     /**
@@ -46,9 +49,15 @@ class User extends Authenticatable
 
     protected static function boot()
     {
+        /**
+         * Upon boot(creation) of user modelBlade:
+         *  -we create a profile for the user
+         *  -and send an email to the new user
+         */
         parent::boot();
 
         static::created(function ($user){
+            //create profile. set profile title to user's username
             $user->profile()->create([
                 'title' => $user->username,
             ]);
@@ -61,14 +70,25 @@ class User extends Authenticatable
     }
 
     public function posts(){
+        /**
+         * Return posts of this user ordered by latest
+         * A user has many posts
+         */
         return $this->hasMany(Post::class)->orderBy('created_at', 'DESC');
     }
 
     public function profile(){
+        /**
+         * Return the profile of this user
+         * A user has one post
+         */
         return $this->hasOne(Profile::class);
     }
 
     public function following(){
+        /**
+         * Return profiles of those who this user follows
+         */
         return $this->belongsToMany(Profile::class);
     }
 }

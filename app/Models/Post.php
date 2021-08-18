@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    /**
+     * The model of a user's posts
+     */
     use HasFactory;
 
     protected $fillable = [
@@ -15,6 +18,9 @@ class Post extends Model
         'image'
     ];
 
+    /**
+     * Each post belongs to one user only
+     */
     public function user(){
         return $this->belongsTo(User::class);
     }

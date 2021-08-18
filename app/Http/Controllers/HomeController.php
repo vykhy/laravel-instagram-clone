@@ -23,6 +23,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        /**
+         * Direct to home page
+         */
         return view('welcome');
     }
 }

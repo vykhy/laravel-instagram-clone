@@ -53,6 +53,9 @@ class ProfilePolicy
      */
     public function update(User $user, Profile $profile)
     {
+        /**
+         * Return authorizaion if viewed profile is that of current user
+         */
         return $user->id == $profile->user->id;
     }
 

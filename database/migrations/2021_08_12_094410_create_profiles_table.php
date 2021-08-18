@@ -14,6 +14,10 @@ class CreateProfilesTable extends Migration
      */
     public function up()
     {
+        /**
+         * Create table for user profiles
+         * profile linked to user id of users table
+         */
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');

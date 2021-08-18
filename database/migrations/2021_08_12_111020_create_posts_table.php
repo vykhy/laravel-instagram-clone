@@ -13,6 +13,10 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
+        /**
+         * Create table for user posts
+         * Posts are linked to user id in users table
+         */
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');

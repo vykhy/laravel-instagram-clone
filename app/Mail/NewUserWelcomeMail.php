@@ -28,6 +28,9 @@ class NewUserWelcomeMail extends Mailable
      */
     public function build()
     {
+        /**
+         * Return mail template of given file
+         */
         return $this->markdown('emails.welcomeMail');
     }
 }
